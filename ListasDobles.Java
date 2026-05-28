@@ -184,32 +184,17 @@ public class ListasDobles {
             ult = p.ant;  
         cant--; 
     } 
-    public boolean eliminarIesimo(int i){
-        if (i < 0 || i >= cant){
-            return false; 
+    public void eliminarIesimo (int i)
+    {
+        Nodo p = prim;
+        for (int k = 0; k < i && p != null; k++)
+        {
+            p = p.prox;
         }
-        if (cant == 1){
-            prim = null;
-            ult = null;
+        if (p != null)
+        {
+            eliminarNodo (p);
         }
-        else if (i == 0){
-            prim = prim.prox;
-            prim.ant = null;
-        }
-        else if (i == cant - 1){
-            ult = ult.ant;
-            ult.prox = null;
-        }
-        else{
-            ListasDobles.Nodo p = prim;
-            for (int k = 0; k < i; k++){
-                p = p.prox;
-            }
-            p.ant.prox = p.prox;
-            p.prox.ant = p.ant;
-        }
-        cant--;
-        return true;
     }
     // 5 MÉTODOS DE ELIMINAR 
  
