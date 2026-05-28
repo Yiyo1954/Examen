@@ -297,4 +297,43 @@ public class ListasDobles {
         eliminarMayoresARec(sig, x); 
     }
 }
+//////////////////////////
+public class Main {
+
+    public static void main(String[] args) {
+
+        ListasDobles L1 = new ListasDobles();
+
+        L1.insertarUlt(4);
+        L1.insertarUlt(8);
+        L1.insertarUlt(10);
+        L1.insertarUlt(8);
+        L1.insertarUlt(6);
+        L1.insertarUlt(10);
+        L1.insertarUlt(6);
+
+        System.out.println("Lista original: " + L1);
+        
+        System.out.println(L1.seEncuentra(10));
+        System.out.println(L1.frecuencia(8));
+        System.out.println(L1.existePar());
+        System.out.println(L1.contarPares());
+        System.out.println(L1.sumarTodo());
+        
+        //eliminar 
+        L1.eliminarIesimo(0);
+        System.out.println("Eliminar 0"+ L1);
+        L1.eliminarPrim();
+        System.out.println("Se elimino 8"+L1);
+        L1.eliminarUlt();
+        System.out.println("Se elimino 6"+L1);
+        L1.eliminarTodo(10);
+        System.out.println("Elimina todos los 10"+L1);
+        L1.eliminarMayoresA(6);
+        System.out.println("Se elimina numeros mayores a 6"+L1);
+    }    
+}
+
+
+
 
